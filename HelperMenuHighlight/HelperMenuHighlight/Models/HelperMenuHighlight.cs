@@ -29,24 +29,24 @@ namespace HelperMenuHighlight.Models
             return string.Empty;
         }
 
-        public static MvcHtmlString LinkMenuHighlight(this HtmlHelper helper, string controller, string action, string classCSS = "active")
-        {
-            var link = new TagBuilder("a");
+        //public static MvcHtmlString LinkMenuHighlight(this HtmlHelper helper, string controller, string action, string classCSS = "active")
+        //{
+        //    var link = new TagBuilder("a");
 
-            var urlHelper = new UrlHelper(helper.ViewContext.RequestContext, helper.RouteCollection);
+        //    var urlHelper = new UrlHelper(helper.ViewContext.RequestContext, helper.RouteCollection);
 
-            link.MergeAttribute("href", urlHelper.Action(action, controller));
+        //    link.MergeAttribute("href", urlHelper.Action(action, controller));
 
-            string requestAction = ObterAction();
-            string requestController = ObterController();
+        //    string requestAction = ObterAction();
+        //    string requestController = ObterController();
 
-            if (controller.Equals(requestController) && action.Equals(requestAction))
-            {
-                link.MergeAttribute("class", classCSS);
-            }
+        //    if (controller.Equals(requestController) && action.Equals(requestAction))
+        //    {
+        //        link.MergeAttribute("class", classCSS);
+        //    }
 
-            return new MvcHtmlString(link.ToString());
-        }
+        //    return new MvcHtmlString(link.ToString());
+        //}
 
         public static string ClasseHighlight(this HtmlHelper helper, string action, string controller, string classCSS = "active")
         {
