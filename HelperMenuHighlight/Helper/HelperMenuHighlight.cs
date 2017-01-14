@@ -9,7 +9,7 @@ namespace Helper
 {
     public static class HelperMenuHighlight
     {
-        public static string ObterController()
+        private static string ObterController()
         {
             var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
 
@@ -19,7 +19,7 @@ namespace Helper
             return string.Empty;
         }
 
-        public static string ObterAction()
+        private static string ObterAction()
         {
             var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
 
